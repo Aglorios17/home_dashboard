@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:home_dashboard/responsive.dart';
 import 'package:home_dashboard/screens/components/side_menu.dart';
-import 'package:home_dashboard/screens/dashboard/dashboard_screen.dart';
 
-
-class HomeScreen extends StatelessWidget {
-   const HomeScreen({super.key});
-
+class Settings extends StatelessWidget {
+  const Settings({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const Expanded(
               flex: 5,
-              child: DashboardScreen(),
+              child: Text("hello Settings"),
             ),
           ],
         )
@@ -27,4 +24,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
