@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:home_dashboard/constants.dart';
 
 class Header extends  StatelessWidget {
-  const Header({super.key});
-
+  
+  const Header({super.key, required this.name});
+  
+  final String name;
+  
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [
-      Text("Dashboard", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+    return Row(children: [
+      Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       ),
-      Spacer(flex: 2),
-      Expanded(child: SearchField()),
-      ProfileCard()
+      const Spacer(flex: 2),
+      const Expanded(child: SearchField()),
+      const ProfileCard()
     ],);
   }
 }

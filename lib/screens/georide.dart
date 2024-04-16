@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_dashboard/responsive.dart';
 import 'package:home_dashboard/screens/components/side_menu.dart';
+import 'package:home_dashboard/screens/georide/georide_screen.dart';
 
 class Georide extends StatelessWidget {
   const Georide({super.key});
@@ -16,7 +17,7 @@ class Georide extends StatelessWidget {
             ),
             const Expanded(
               flex: 5,
-              child: Text("hello Georide"),
+              child: GeorideScreen(),
             ),
           ],
         )

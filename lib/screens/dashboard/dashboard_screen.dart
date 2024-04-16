@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:home_dashboard/constants.dart';
 import 'package:home_dashboard/screens/components/header.dart';
 
@@ -14,7 +12,7 @@ class DashboardScreen extends StatelessWidget {
         padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            const Header(),
+            const Header(name:"Dashboard"),
             const SizedBox(height: defaultPadding,),
             Row(
               children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:home_dashboard/constants.dart';
 import 'package:home_dashboard/responsive.dart';
+import 'package:home_dashboard/screens/components/header.dart';
 import 'package:home_dashboard/screens/components/side_menu.dart';
 
 class Settings extends StatelessWidget {
@@ -16,8 +18,15 @@ class Settings extends StatelessWidget {
             ),
             const Expanded(
               flex: 5,
-              child: Text("hello Settings"),
-            ),
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(defaultPadding),
+                child: Column(
+                  children: [
+                    Header(name:"Settings"),
+                  ]
+                ),
+              )
+            )
           ],
         )
       ),
