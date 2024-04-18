@@ -64,17 +64,16 @@ class ProfileCard extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(color: Colors.white10),
       ),
-      child: Row(
+      child: const Row(
         children: [
-          Image.asset(
-            'images/Me.jpg', 
-            height: 38,
+          CircleAvatar(
+            backgroundImage: AssetImage('images/Me.jpg'),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: defaultPadding/2), 
             child: Text("Alessio Glorioso"),
           ),
-          const Icon(Icons.keyboard_arrow_down),
+          Icon(Icons.keyboard_arrow_down),
         ],
       )
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_dashboard/screens/cctv.dart';
 import 'package:home_dashboard/screens/crypto.dart';
+import 'package:home_dashboard/screens/formulaone.dart';
 import 'package:home_dashboard/screens/georide.dart';
 import 'package:home_dashboard/screens/home.dart';
 import 'package:home_dashboard/screens/profile.dart';
@@ -20,7 +21,7 @@ class SideMenu extends StatelessWidget {
             ListTile(leading: const Icon(Icons.dashboard, color: Colors.white,),
                     title: const Text("Dashboard"),
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const HomeScreen(),
@@ -33,7 +34,7 @@ class SideMenu extends StatelessWidget {
             ListTile(leading: const Icon(Icons.currency_bitcoin, color: Colors.white,),
                   title: const Text("Crypto"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const Crypto(),
@@ -46,7 +47,7 @@ class SideMenu extends StatelessWidget {
             ListTile(leading: const Icon(Icons.motorcycle, color: Colors.white,),
                   title: const Text("Georide"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const Georide(),
@@ -56,10 +57,25 @@ class SideMenu extends StatelessWidget {
                     );
                   },
             ),
+            ListTile(
+                  leading:
+                  Image.asset('images/F1.png', height: 6.5),
+                  title: const Text("Formula One"),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) => const FormulaOne(),
+                          transitionDuration: Duration.zero,
+                          reverseTransitionDuration: Duration.zero,
+                      ),
+                    );
+                  },
+            ),
             ListTile(leading: const Icon(Icons.camera, color: Colors.white,),
                   title: const Text("CCTV"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const Cctv(),
@@ -72,7 +88,7 @@ class SideMenu extends StatelessWidget {
             ListTile(leading: const Icon(Icons.person, color: Colors.white,),
                   title: const Text("Profile"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const Profile(),
@@ -85,7 +101,7 @@ class SideMenu extends StatelessWidget {
             ListTile(leading: const Icon(Icons.settings, color: Colors.white,),
                   title: const Text("Settings"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
                           pageBuilder: (context, animation, secondaryAnimation) => const Settings(),

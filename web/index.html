@@ -38,6 +38,14 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script async>
+    document.addEventListener("google-maps-api-key-loaded", function (){
+      var googleapis = window.googleMapsApiKey;
+      var script = document.createElement('script');
+      script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleapis + "&loading=async";
+      document.head.appendChild(script);
+    });
+  </script>
 </head>
 <body>
   <script>
