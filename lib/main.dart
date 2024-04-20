@@ -1,7 +1,8 @@
 import 'package:home_dashboard/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-//import 'package:home_dashboard/screens/formulaOne.dart';
+import 'package:home_dashboard/screens/formulaOne.dart';
+import 'package:home_dashboard/screens/georide.dart';
 import 'package:home_dashboard/screens/home.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:universal_html/js.dart' as js;
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
       ),
-      home: const HomeScreen()// FormulaOne()
+      home: const HomeScreen()
     );
   }
 }
